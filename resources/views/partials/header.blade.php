@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       Aznur Kabel
@@ -9,19 +9,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item {{ Nav::hasSegment(NULL, 2) }}">
           <a class="nav-link" href="/">@lang('header.home')</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item {{ Nav::hasSegment('about', 2) }}">
           <a class="nav-link" href="/about">@lang('header.about')</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item {{ Nav::isResource('products') }}">
           <a class="nav-link" href="/products">@lang('header.products')</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item {{ Nav::hasSegment('contact', 2) }}">
           <a class="nav-link" href="/contact">@lang('header.contact')</a>
         </li>
 

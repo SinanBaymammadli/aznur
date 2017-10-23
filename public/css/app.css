@@ -9717,6 +9717,14 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
+.carousel-img {
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #222;
+}
+
 .dropdown-menu {
   min-width: auto;
 }
