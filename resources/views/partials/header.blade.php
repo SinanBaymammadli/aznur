@@ -9,19 +9,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/">@lang('header.home')</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/about">About us</a>
+        <a class="nav-link" href="/about">@lang('header.about')</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/products">Our Products</a>
+        <a class="nav-link" href="/products">@lang('header.products')</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact</a>
+        <a class="nav-link" href="/contact">@lang('header.contact')</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -29,8 +29,8 @@
           {{ strtoupper(app()->getLocale()) }}
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">AZ</a>
-          <a class="dropdown-item" href="#">EN</a>
+          <a class="dropdown-item" href="{{ url('az/' . $url_without_locale) }}">AZ</a>
+          <a class="dropdown-item" href="{{ url('en/' . $url_without_locale) }}">EN</a>
         </div>
       </li>
     </ul>

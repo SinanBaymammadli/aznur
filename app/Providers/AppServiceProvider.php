@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+      $url_segments = request()->segments();
+      array_shift($url_segments);
+      $url_without_locale = implode('/', $url_segments);
+
+      View::share("url_without_locale", $url_without_locale );
     }
 
     /**
