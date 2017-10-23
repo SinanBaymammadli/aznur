@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-  <h2>@lang("home.welcome")</h2>
+  <h2>Contact</h2>
 
 </div>
 @endsection
