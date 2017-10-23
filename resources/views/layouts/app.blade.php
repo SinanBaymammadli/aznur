@@ -73,7 +73,11 @@
 
         @include("partials.header")
 
-        @yield('content')
+        <div class="content">
+          @yield('content')
+        </div>
+
+        @include("partials.footer")
     </div>
 
     <!-- Scripts -->

@@ -3,8 +3,7 @@
 @section('content')
 <div class="container-fluid">
 
-  <h2>Contact</h2>
+  <h2>Product index</h2>
 
 </div>
 @endsection
-

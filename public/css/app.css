@@ -9721,3 +9721,17 @@ a.text-dark:hover {
   min-width: auto;
 }
 
+.main-footer {
+  padding: 100px 0;
+  background-color: #222222;
+  color: #fff;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+.content {
+  min-height: calc(100vh - 500px);
+}
+

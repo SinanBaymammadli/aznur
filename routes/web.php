@@ -23,6 +23,8 @@ Route::prefix('/{locale?}')->middleware('locale')->group(function () {
   Route::get('/contact', function () {
     return view('contact');
   });
+
+  Route::resource('/products', 'ProductController');
 });
 
 Auth::routes();
