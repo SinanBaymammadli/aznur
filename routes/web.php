@@ -11,6 +11,10 @@
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::prefix('/{locale?}')->middleware('locale')->group(function () {
   Route::get('/', function () {
       return view('welcome');
@@ -25,8 +29,8 @@ Route::prefix('/{locale?}')->middleware('locale')->group(function () {
   });
 
   Route::resource('/products', 'ProductController');
+
+  Route::group(['middleware' => 'auth'], function() {
+    Route::resource('products', 'ProductController', ['except' => ['index', 'show']]);
+  });
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
