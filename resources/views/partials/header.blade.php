@@ -1,4 +1,55 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<header class="header">
+  <div class="container-fluid h-100">
+    <div class="header-inner">
+      <div class="header-left">
+        <a class="header-logo header-link" href="/">
+          Aznur Kabel
+        </a>
+      </div>
+
+      <div class="header-right">
+        <nav class="main-nav js-main-nav">
+          <a class="header-link {{ Nav::hasSegment(NULL, 2) }}" href="/">
+            @lang('header.home')
+          </a>
+          <a class="header-link {{ Nav::hasSegment('about', 2) }}" href="/about">
+            @lang('header.about')
+          </a>
+          <a class="header-link {{ Nav::isResource('products') }}" href="/products">
+            @lang('header.products')
+          </a>
+          <a class="header-link {{ Nav::hasSegment('contact', 2) }}" href="/contact">
+            @lang('header.contact')
+          </a>
+
+          <div class="dropdown lang-dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ strtoupper(app()->getLocale()) }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="{{ url('az/' . $url_without_locale) }}">AZ</a>
+              <a class="dropdown-item" href="{{ url('en/' . $url_without_locale) }}">EN</a>
+            </div>
+          </div>
+
+          <div class="lang-links">
+            <a class="header-link" href="{{ url('az/' . $url_without_locale) }}">AZ</a>
+            <a class="header-link" href="{{ url('en/' . $url_without_locale) }}">EN</a>
+          </div>
+
+        </nav>
+
+        <span class="nav-toggle-btn js-nav-toggle-btn">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- <nav class="navbar fixed-top navbar-expand-md navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       Aznur Kabel
@@ -22,7 +73,7 @@
         </li>
 
         <li class="nav-item {{ Nav::hasSegment('contact', 2) }}">
-          <a class="nav-link" href="/contact">@lang('header.contact')</a>
+
         </li>
 
         <li class="nav-item dropdown">
@@ -59,4 +110,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->

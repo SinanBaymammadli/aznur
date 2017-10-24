@@ -3,8 +3,12 @@
 @import "variables";
 
 @import "components/carousel";
+@import "components/page-title";
 
 @import "partials/header";
 @import "partials/footer";
+
+@import "pages/about";
+@import "pages/contact";
 
 @import "layout";

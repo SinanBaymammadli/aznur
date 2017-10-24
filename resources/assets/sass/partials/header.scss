@@ -1,11 +1,134 @@
-.dropdown-menu {
-  min-width: auto;
+.header {
+  height: 56px;
+  background-color: #ffffff;
+
+  .header-logo {
+    color: #000000;
+  }
+
+  .lang-dropdown {
+    display: none;
+
+    // button {
+    //   background: transparent !important;
+    //   border: none !important;
+    //   box-shadow: none !important;
+    // }
+  }
+
+  // .lang-dropdown .dropdown-menu {
+  //   min-width: auto;
+  // }
 }
 
-// .navbar {
-//   position: absolute;
-//   z-index: 1;
-//   height: 80px;
-//   width: 100%;
-//   background-color: rgba($color: #000000, $alpha: 0.1) !important;
-// }
+.lang-links {
+  padding: 17px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 2px 0px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.header-link {
+  color: #000000;
+  padding: 17px;
+  text-decoration: none;
+  transition: color 0.2s linear;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  &.active {
+    color: $primary-color;
+  }
+}
+
+.nav-toggle-btn {
+  display: inline-block;
+  line-height: 11px;
+}
+
+@include media-breakpoint-up(md) {
+  .header {
+    height: 64px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    background-color: transparent;
+
+    .lang-dropdown {
+      display: inline-block;
+
+      button {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    .lang-dropdown .dropdown-menu {
+      min-width: auto;
+    }
+  }
+
+  .lang-links {
+    display: none;
+  }
+
+  .header-link {
+    color: #ffffff;
+  }
+
+  .main-nav {
+    display: block;
+    opacity: 1;
+    position: static;
+    transform: translate(0);
+    box-shadow: none;
+    pointer-events: auto;
+    background-color: transparent;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+}

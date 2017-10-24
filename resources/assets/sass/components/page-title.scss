@@ -1,0 +1,25 @@
+.page-title-wrapper {
+  position: relative;
+
+  .page-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.title-seperator {
+  display: block;
+  width: 70px;
+  background-color: $primary-color;
+  height: 2px;
+  margin: 5px auto;
+
+  &.left {
+    margin: 5px auto 5px 0;
+  }
+}

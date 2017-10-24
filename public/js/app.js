@@ -11012,9 +11012,12 @@ module.exports = __webpack_require__(34);
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__header__);
 /**
  * First, we will load all of this project's Javascript utilities and other
  * dependencies. Then, we will be ready to develop a robust and powerful
@@ -11022,6 +11025,8 @@ module.exports = __webpack_require__(34);
  */
 
 __webpack_require__(10);
+
+
 
 /***/ }),
 /* 10 */
@@ -18505,6 +18510,21 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */
+/***/ (function(module, exports) {
+
+var toggleBtn = document.querySelector(".js-nav-toggle-btn");
+var mainNav = document.querySelector(".js-main-nav");
+
+toggleBtn.addEventListener("click", function () {
+  mainNav.classList.toggle("show");
+});
 
 /***/ })
 /******/ ]);
