@@ -1,0 +1,18 @@
+.heading-underline {
+  font-weight: bold;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 2em;
+    background-color: $primary-color;
+    margin: 7px 0;
+  }
+
+  &_center {
+    &:after {
+      margin: 7px auto;
+    }
+  }
+}

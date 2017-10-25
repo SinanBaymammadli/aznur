@@ -9748,6 +9748,12 @@ a.text-dark:hover {
   margin: 1rem 0;
 }
 
+@media (min-width: 768px) {
+  .page-title-wrapper {
+    padding-top: 100px;
+  }
+}
+
 .heading-underline {
   font-weight: bold;
 }
@@ -9763,12 +9769,6 @@ a.text-dark:hover {
 
 .heading-underline_center:after {
   margin: 7px auto;
-}
-
-@media (min-width: 768px) {
-  .page-title-wrapper {
-    padding-top: 100px;
-  }
 }
 
 .header {
@@ -9922,9 +9922,65 @@ a.text-dark:hover {
 }
 
 .main-footer {
-  padding: 100px 0;
+  padding: 90px 0 60px 0;
   background-color: #222222;
   color: #fff;
+}
+
+.footer-col {
+  margin: 20px 0;
+}
+
+.footer-heading {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.footer-text {
+  color: #777777;
+}
+
+.footer-link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+.footer-link.active {
+  color: #ffcc00;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.social-link svg {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+  -webkit-transition: fill 0.2s linear;
+  transition: fill 0.2s linear;
+}
+
+.social-link:hover svg {
+  fill: #ffcc00;
+}
+
+@media (min-width: 768px) {
+  .footer-col {
+    margin: 0;
+  }
 }
 
 .about-page {
