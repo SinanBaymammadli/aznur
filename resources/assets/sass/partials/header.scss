@@ -3,7 +3,9 @@
   background-color: #ffffff;
 
   .header-logo {
-    color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   .lang-dropdown {
@@ -87,7 +89,7 @@
 
 @include media-breakpoint-up(md) {
   .header {
-    height: 64px;
+    height: $header-height-tall;
     position: absolute;
     top: 0;
     left: 0;

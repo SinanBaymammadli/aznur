@@ -1,25 +1,41 @@
 .page-title-wrapper {
-  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url("./../img/header-bottom-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 20px 0;
 
   .page-title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
     text-align: center;
     color: #ffffff;
+    margin: 1rem 0;
   }
 }
 
-.title-seperator {
-  display: block;
-  width: 70px;
-  background-color: $primary-color;
-  height: 2px;
-  margin: 5px auto;
+.heading-underline {
+  font-weight: bold;
 
-  &.left {
-    margin: 5px auto 5px 0;
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 2em;
+    background-color: $primary-color;
+    margin: 7px 0;
+  }
+
+  &_center {
+    &:after {
+      margin: 7px auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .page-title-wrapper {
+    padding-top: $header-height-tall;
   }
 }
