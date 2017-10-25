@@ -6,3 +6,17 @@ h5,
 p {
   color: $text-color-dark;
 }
+
+::selection {
+  background: $primary-color;
+  color: $text-color-light;
+}
+
+button,
+input,
+textarea,
+a {
+  &:focus {
+    outline-color: $primary-color;
+  }
+}

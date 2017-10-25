@@ -23,10 +23,10 @@
           </a>
 
           <div class="dropdown lang-dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="dropdown-toggle" type="button" id="langunage-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ strtoupper(app()->getLocale()) }}
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langunage-dropdown">
               <a class="dropdown-item" href="{{ url('az/' . $url_without_locale) }}">AZ</a>
               <a class="dropdown-item" href="{{ url('en/' . $url_without_locale) }}">EN</a>
             </div>

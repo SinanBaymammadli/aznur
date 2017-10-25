@@ -7,7 +7,6 @@
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/bootstrap-grid";
-@import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 
 // custom styles
@@ -16,6 +15,8 @@
 @import "components/carousel";
 @import "components/page-title";
 @import "components/heading";
+@import "components/form";
+@import "components/button";
 
 @import "partials/header";
 @import "partials/footer";
