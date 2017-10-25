@@ -20,3 +20,24 @@ mix
   .js("resources/assets/js/app.js", "public/js")
   .sass("resources/assets/sass/app.scss", "public/css")
   .copy("resources/assets/img/", "public/img/");
+
+if (mix.inProduction()) {
+  mix.version();
+
+  mix.webpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.js?$/,
+          exclude: /node_modules(?!\/bootstrap)|bower_components/,
+          use: [
+            {
+              loader: "babel-loader",
+              options: mix.config.babel()
+            }
+          ]
+        }
+      ]
+    }
+  });
+}
