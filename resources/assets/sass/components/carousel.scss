@@ -1,7 +1,90 @@
+$tr-opacity: 0.7s;
+$tr-transform: 0.5s;
+$tr-delay: 0.3s;
+$tr-delay-times: 1.5;
+$tr-function: ease-out;
+
 .carousel-img {
   height: 500px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #222;
+
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  &:nth-child(1) {
+    .carousel-img {
+      background-image: url("./../img/img1.jpg");
+    }
+  }
+
+  &:nth-child(2) {
+    .carousel-img {
+      background-image: url("./../img/img2.jpg");
+    }
+  }
+
+  &:nth-child(3) {
+    .carousel-img {
+      background-image: url("./../img/img1.jpg");
+    }
+  }
+}
+
+.carousel-content {
+  max-width: 600px;
+}
+
+.carousel-heading {
+  color: $text-color-light;
+  font-weight: bold;
+  font-size: 3rem;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $tr-opacity ease-in-out,
+    transform $tr-transform ease-in-out;
+}
+
+.carousel-text {
+  color: $text-color-light;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $tr-opacity $tr-delay $tr-function,
+    transform $tr-transform $tr-delay $tr-function;
+}
+
+.carousel-button {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $tr-opacity $tr-delay*$tr-delay-times $tr-function,
+    transform $tr-transform $tr-delay*$tr-delay-times $tr-function;
+}
+
+.carousel-item.active {
+  .carousel-heading {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .carousel-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .carousel-button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .carousel-heading {
+    font-size: 3.6rem;
+  }
 }

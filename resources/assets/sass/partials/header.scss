@@ -3,9 +3,9 @@
   background-color: #ffffff;
 
   .header-logo {
-    color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
+    padding: 0;
   }
 
   .lang-dropdown {
@@ -61,6 +61,7 @@
   text-decoration: none;
   transition: color 0.2s linear;
   font-weight: bold;
+  text-transform: uppercase;
 
   &:hover {
     text-decoration: none;
@@ -100,6 +101,10 @@
 
     .lang-dropdown .dropdown-menu {
       min-width: auto;
+    }
+
+    .header-logo {
+      color: #ffffff;
     }
   }
 

@@ -10514,6 +10514,8 @@ module.exports = __webpack_require__(10);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__header__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__carousel__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__carousel__);
 /**
  * First, we will load all of this project's Javascript utilities and other
  * dependencies. Then, we will be ready to develop a robust and powerful
@@ -10521,6 +10523,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(4);
+
 
 
 
@@ -14069,6 +14072,29 @@ toggleBtn.addEventListener("click", function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
+/***/ (function(module, exports) {
+
+// $("#welcomeCarousel").on("slid.bs.carousel", function(e) {
+//   $(e.relatedTarget)
+//     .find(".carousel-content")
+//     .addClass("show");
+
+//   if (e.to === 0) {
+//     e.to = 3;
+//   }
+
+//   console.log(e.to);
+
+//   $(`.carousel-content:nth-child(${e.to})`).removeClass("show");
+// });
 
 /***/ })
 /******/ ]);
