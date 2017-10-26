@@ -10503,7 +10503,7 @@ const Util = (() => {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-module.exports = __webpack_require__(10);
+module.exports = __webpack_require__(11);
 
 
 /***/ }),
@@ -10514,7 +10514,7 @@ module.exports = __webpack_require__(10);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__header__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__carousel__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__carousel__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__carousel__);
 /**
  * First, we will load all of this project's Javascript utilities and other
@@ -14071,17 +14071,6 @@ toggleBtn.addEventListener("click", function () {
 /* 10 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
-/***/ (function(module, exports) {
-
 // $("#welcomeCarousel").on("slid.bs.carousel", function(e) {
 //   $(e.relatedTarget)
 //     .find(".carousel-content")
@@ -14095,6 +14084,12 @@ toggleBtn.addEventListener("click", function () {
 
 //   $(`.carousel-content:nth-child(${e.to})`).removeClass("show");
 // });
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

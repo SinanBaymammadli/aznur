@@ -1,0 +1,27 @@
+.features {
+  padding: 148px 0 94px 0;
+}
+
+.feature {
+  display: flex;
+}
+
+.feature-icon {
+  padding: 0 30px 0 0;
+
+  svg {
+    width: 63px;
+    height: 63px;
+    fill: #acacac;
+    transition: fill 0.2s linear;
+
+    &:hover {
+      fill: $primary-color;
+    }
+  }
+}
+
+.feature-paragraph {
+  color: $text-color-gray;
+  margin-top: 30px;
+}

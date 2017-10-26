@@ -3400,6 +3400,37 @@ mark,
   }
 }
 
+.features {
+  padding: 148px 0 94px 0;
+}
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature-icon {
+  padding: 0 30px 0 0;
+}
+
+.feature-icon svg {
+  width: 63px;
+  height: 63px;
+  fill: #acacac;
+  -webkit-transition: fill 0.2s linear;
+  transition: fill 0.2s linear;
+}
+
+.feature-icon svg:hover {
+  fill: #ffcc00;
+}
+
+.feature-paragraph {
+  color: #777777;
+  margin-top: 30px;
+}
+
 .container-fluid {
   max-width: 1200px;
 }
