@@ -3431,6 +3431,69 @@ mark,
   margin-top: 30px;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 100px 0;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ddd;
+}
+
+.product img {
+  max-width: 100%;
+  display: block;
+}
+
+.pagination {
+  margin: 20px 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.pagination li {
+  padding: 10px;
+}
+
+.pagination li a {
+  color: #303030;
+  font-weight: bold;
+}
+
+.pagination li a:hover {
+  text-decoration: none;
+}
+
+.pagination li.active,
+.pagination li:hover {
+  background-color: #ffcc00;
+  color: #ffffff;
+}
+
+@media (min-width: 576px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .container-fluid {
   max-width: 1200px;
 }

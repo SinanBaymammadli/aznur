@@ -1,0 +1,51 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 100px 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.pagination {
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  li {
+    padding: 10px;
+
+    a {
+      color: $text-color-dark;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.active,
+    &:hover {
+      background-color: $primary-color;
+      color: $text-color-light;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+      $products = Product::paginate(8);
+
+      return view('product.index')->with('products', $products);
     }
 
     /**
@@ -44,9 +46,9 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($locale, Product $product)
     {
-      return view('product.show');
+      return view('product.show')->with('product', $product);
     }
 
     /**
