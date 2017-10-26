@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="page-title-wrapper">
+  <h1 class="page-title text-center heading-underline heading-underline_center">
+    Home
+  </h1>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

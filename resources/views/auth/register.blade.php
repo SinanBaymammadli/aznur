@@ -1,7 +1,56 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="page-title-wrapper">
+  <h1 class="page-title text-center heading-underline heading-underline_center">
+    Register
+  </h1>
+</div>
+
+<div class="container-fluid">
+  <div class="register-page">
+    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+      {{ csrf_field() }}
+
+      <div class="form-group">
+        <input id="name" type="text" class="input" name="name" placeholder="Name" value="{{ old('name') }}" required autofocus>
+        @if ($errors->has('name'))
+            <span class="help-block">
+                <strong>{{ $errors->first('name') }}</strong>
+            </span>
+        @endif
+      </div>
+
+      <div class="form-group">
+        <input id="email" type="email" class="input" name="email" placeholder="E-Mail Address" value="{{ old('email') }}" required>
+        @if ($errors->has('email'))
+            <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+      </div>
+
+      <div class="form-group">
+        <input id="password" type="password" class="input" name="password" placeholder="Password" required>
+        @if ($errors->has('password'))
+            <span class="help-block">
+                <strong>{{ $errors->first('password') }}</strong>
+            </span>
+        @endif
+      </div>
+      <div class="form-group">
+        <input id="password-confirm" type="password" class="input" name="password_confirmation" placeholder="Confirm Password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="button">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -73,5 +122,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection

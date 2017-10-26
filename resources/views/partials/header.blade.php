@@ -37,6 +37,31 @@
             <a class="header-link" href="{{ url('en/' . $url_without_locale) }}">EN</a>
           </div>
 
+          @auth
+
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="logout-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ Auth::user()->name }}
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="logout-dropdown">
+                <a class="dropdown-item"
+                    href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+              </div>
+            </div>
+
+            <a class="header-link {{ Nav::hasSegment('register', 1) }}" href="/register">
+              Register
+            </a>
+
+          @endauth
+
         </nav>
 
         <span class="nav-toggle-btn js-nav-toggle-btn">

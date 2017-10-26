@@ -3131,6 +3131,11 @@ mark,
   color: #ffffff;
 }
 
+.button-full {
+  display: block;
+  width: 100%;
+}
+
 .header {
   height: 56px;
   background-color: #ffffff;
@@ -3242,7 +3247,7 @@ mark,
     background-color: transparent;
   }
 
-  .header .lang-dropdown {
+  .header .dropdown {
     display: inline-block;
   }
 
@@ -3349,6 +3354,17 @@ mark,
   }
 }
 
+.register-page,
+.password-reset-page {
+  margin: 100px auto;
+  width: 290px;
+}
+
+.forgot-password-link {
+  margin-top: 10px;
+  display: block;
+}
+
 .about-page {
   padding: 70px 0 30px 0;
 }
@@ -3452,6 +3468,11 @@ mark,
   border: 1px solid #ddd;
 }
 
+.product:hover {
+  text-decoration: none;
+  color: #303030;
+}
+
 .product img {
   max-width: 100%;
   display: block;
@@ -3469,21 +3490,21 @@ mark,
   list-style: none;
 }
 
-.pagination li {
+.pagination li * {
   padding: 10px;
-}
-
-.pagination li a {
   color: #303030;
   font-weight: bold;
-}
-
-.pagination li a:hover {
   text-decoration: none;
 }
 
-.pagination li.active,
-.pagination li:hover {
+.pagination li *:hover {
+  text-decoration: none;
+  background-color: #ffcc00;
+  color: #ffffff;
+}
+
+.pagination li.active * {
+  text-decoration: none;
   background-color: #ffcc00;
   color: #ffffff;
 }

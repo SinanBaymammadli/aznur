@@ -13,7 +13,7 @@
   <div class="products">
     @foreach( $products as $product )
       <a href="{{ route('products.show', [$locale, $product->id]) }}" class="product">
-        <h5>{{ $product->name }}</h5>
+        <h5 class="product-name">{{ $product->name }}</h5>
         <img src="{{ asset($product->imgUrl) }}" alt="">
         <!-- <p>{{ $product->description }}</p> -->
       </a>

@@ -88,9 +88,11 @@
     z-index: 111;
     background-color: transparent;
 
-    .lang-dropdown {
+    .dropdown {
       display: inline-block;
+    }
 
+    .lang-dropdown {
       button {
         background: transparent !important;
         border: none !important;

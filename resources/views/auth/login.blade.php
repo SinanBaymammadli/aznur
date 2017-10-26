@@ -1,7 +1,57 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="page-title-wrapper">
+  <h1 class="page-title text-center heading-underline heading-underline_center">
+    Login
+  </h1>
+</div>
+
+<div class="container-fluid">
+  <div class="register-page">
+    <form method="POST" action="{{ route('login') }}">
+      {{ csrf_field() }}
+
+      <div class="form-group">
+      <input id="email" type="email" class="input" name="email" placeholder="E-Mail Address" value="{{ old('email') }}" required autofocus>
+        @if ($errors->has('email'))
+            <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+      </div>
+
+      <div class="form-group">
+        <input id="password" type="password" class="input" name="password" placeholder="Password" required>
+        @if ($errors->has('password'))
+            <span class="help-block">
+                <strong>{{ $errors->first('password') }}</strong>
+            </span>
+        @endif
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+            </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="button button-full">
+            Login
+        </button>
+
+        <a class="forgot-password-link" href="{{ route('password.request') }}">
+            Forgot Your Password?
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -65,5 +115,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
