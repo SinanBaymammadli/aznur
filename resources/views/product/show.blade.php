@@ -7,11 +7,13 @@
 
 <div class="container-fluid">
 
-  <h2>{{$product->name}}</h2>
+  <div class="product-show-page">
+    <h2>{{$product->name}}</h2>
 
-  <img src="{{ asset($product->imgUrl) }}" alt="">
+    <img src="{{ asset($product->imgUrl) }}" alt="">
 
-  <p>{{$product->description}}</p>
+    <p>{{$product->description}}</p>
+  </div>
 
 </div>
 @endsection

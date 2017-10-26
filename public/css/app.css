@@ -3515,6 +3515,11 @@ mark,
   }
 }
 
+.product-show-page {
+  text-align: center;
+  margin: 100px 0;
+}
+
 .container-fluid {
   max-width: 1200px;
 }
