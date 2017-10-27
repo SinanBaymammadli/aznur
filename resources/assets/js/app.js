@@ -7,4 +7,5 @@
 require("./bootstrap");
 
 import "./header";
-import "./carousel";
+import "./slider";
+import "./loading";

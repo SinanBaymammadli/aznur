@@ -2,59 +2,48 @@
 
 @section('content')
 
-<div id="welcomeCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-  <ol class="carousel-indicators">
-    <li data-target="#welcomeCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#welcomeCarousel" data-slide-to="1"></li>
-    <li data-target="#welcomeCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="carousel-img">
-        <div class="container-fluid">
-          <div class="carousel-content">
-            <h1 class="carousel-heading">We are the best construction experts</h1>
-            <p class="carousel-text">Lars Focke specialises in capturing patterns and turning them</p>
-            <button class="button carousel-button">See our lastest work</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="carousel-img">
-        <div class="container-fluid">
-          <div class="carousel-content">
-            <h1 class="carousel-heading">We are the best construction experts</h1>
-            <p class="carousel-text">Lars Focke specialises in capturing patterns and turning them</p>
-            <button class="button carousel-button">See our lastest work</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="carousel-img">
-        <div class="container-fluid">
-          <div class="carousel-content">
-            <h1 class="carousel-heading">We are the best construction experts</h1>
-            <p class="carousel-text">Lars Focke specialises in capturing patterns and turning them</p>
-            <button class="button carousel-button">See our lastest work</button>
-          </div>
+<div class="slider main-slider">
+  <div class="slider-item">
+    <div class="main-slider-img" style="background-image: url(' {{ asset('img/img1.jpg') }} ')">
+      <div class="container-fluid">
+        <div class="main-slider-content">
+          <h1 class="main-slider-heading">We are the best construction experts</h1>
+          <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
+          <button class="button main-slider-button">See our lastest work</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </a> -->
+
+  <div class="slider-item">
+    <div class="main-slider-img" style="background-image: url(' {{ asset('img/img2.jpg') }} ')">
+      <div class="container-fluid">
+        <div class="main-slider-content">
+          <h1 class="main-slider-heading">We are the best construction experts</h1>
+          <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
+          <button class="button main-slider-button">See our lastest work</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-item">
+    <div class="main-slider-img" style="background-image: url(' {{ asset('img/img1.jpg') }} ')">
+      <div class="container-fluid">
+        <div class="main-slider-content">
+          <h1 class="main-slider-heading">We are the best construction experts</h1>
+          <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
+          <button class="button main-slider-button">See our lastest work</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container-fluid">
   <div class="features">
     <div class="row">
-      <div class="col">
+      <div class="col-lg">
         <div class="feature">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24">
@@ -67,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-lg">
         <div class="feature">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24">
@@ -80,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-lg">
         <div class="feature">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24">
@@ -96,35 +85,7 @@
     </div>
   </div>
 
-  <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="{{ asset('img/product1.png') }}" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ asset('img/product1.png') }}" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ asset('img/product1.png') }}" alt="Third slide">
-      </div>
-
-      @foreach($products as $product)
-
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{{ asset($product->imgUrl) }}" alt="Second slide">
-        </div>
-
-      @endforeach
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div> -->
+  @include("partials.product-slider")
 </div>
 
 

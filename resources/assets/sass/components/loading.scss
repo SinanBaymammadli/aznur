@@ -1,0 +1,42 @@
+.loading {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  background-color: #ffffff;
+}
+
+.laoding-cube {
+  width: 60px;
+  height: 60px;
+  background-color: $primary-color;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+.laoding-hide {
+  opacity: 0;
+  pointer-events: none;
+
+  .laoding-cube {
+    animation: none;
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

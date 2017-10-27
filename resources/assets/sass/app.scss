@@ -1,10 +1,13 @@
 //@import "node_modules/bootstrap/scss/bootstrap";
 
+// slick slider
+@import "node_modules/slick-carousel/slick/slick.scss";
+
 // Required by BT
 @import "node_modules/bootstrap/scss/bootstrap-reboot";
 
 // Optional
-@import "node_modules/bootstrap/scss/carousel";
+//@import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/bootstrap-grid";
 @import "node_modules/bootstrap/scss/type";
@@ -12,11 +15,12 @@
 // custom styles
 @import "variables";
 
-@import "components/carousel";
+@import "components/slider";
 @import "components/page-title";
 @import "components/heading";
 @import "components/form";
 @import "components/button";
+@import "components/loading";
 
 @import "partials/header";
 @import "partials/footer";

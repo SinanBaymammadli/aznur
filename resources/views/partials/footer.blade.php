@@ -1,12 +1,12 @@
 <footer class="main-footer">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm footer-col">
+      <div class="col-md-6 footer-col">
         <h4 class="heading-underline footer-heading">@lang('footer.about_company_title')</h4>
 
         <p class="footer-text">@lang('about.paragraph')</p>
       </div>
-      <div class="col-sm footer-col">
+      <div class="col-md-3 footer-col">
         <h4 class="heading-underline footer-heading">@lang('footer.products_title')</h4>
 
         <a class="footer-link {{ Nav::hasSegment(NULL, 2) }}" href="/">@lang('header.home')</a>
@@ -14,7 +14,7 @@
         <a class="footer-link {{ Nav::isResource('products') }}" href="/products">@lang('header.products')</a>
         <a class="footer-link {{ Nav::hasSegment('contact', 2) }}" href="/contact">@lang('header.contact')</a>
       </div>
-      <div class="col-sm footer-col">
+      <div class="col-md-3 footer-col">
         <h4 class="heading-underline footer-heading">@lang('footer.social_links_title')</h4>
 
         <a class="social-link" href="https://www.facebook.com/" target="_blank" rel='noopener noreferrer'>

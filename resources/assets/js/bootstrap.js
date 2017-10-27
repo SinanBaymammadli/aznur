@@ -11,7 +11,7 @@ try {
 } catch (e) {}
 
 import "bootstrap/js/src/dropdown";
-import "bootstrap/js/src/carousel";
+//import "bootstrap/js/src/carousel";
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

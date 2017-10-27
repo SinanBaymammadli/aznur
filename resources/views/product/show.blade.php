@@ -15,5 +15,7 @@
     <p>{{$product->description}}</p>
   </div>
 
+  @include("partials.product-slider")
+
 </div>
 @endsection

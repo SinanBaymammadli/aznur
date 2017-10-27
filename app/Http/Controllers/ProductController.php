@@ -48,7 +48,11 @@ class ProductController extends Controller
      */
     public function show($locale, Product $product)
     {
-      return view('product.show')->with('product', $product);
+      $products = Product::all();
+
+      return view('product.show')
+              ->with('product', $product)
+              ->with('products', $products);
     }
 
     /**
