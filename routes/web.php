@@ -16,9 +16,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('/{locale?}')->middleware('locale')->group(function () {
-  Route::get('/', function () {
-      return view('welcome');
-  });
+
+  Route::get('/', 'WelcomeController@index')->name('welcome');
 
   Route::get('/about', function () {
     return view('about');
@@ -33,4 +32,5 @@ Route::prefix('/{locale?}')->middleware('locale')->group(function () {
   Route::group(['middleware' => 'auth'], function() {
     Route::resource('products', 'ProductController', ['except' => ['index', 'show']]);
   });
+
 });
