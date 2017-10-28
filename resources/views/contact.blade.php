@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="page-title-wrapper">
-  <h1 class="page-title text-center heading-underline heading-underline_center">@lang('contact.page_title')</h1>
+  <h1 class="page-title heading-underline heading-underline_center">@lang('contact.page_title')</h1>
 </div>
 
 <div class="contact-page">

@@ -2865,10 +2865,16 @@ mark,
   background-color: transparent;
 }
 
+.slider .slick-arrow:hover svg {
+  fill: #ffcc00;
+}
+
 .slider .slick-arrow svg {
   fill: #303030;
   width: 24px;
   height: 24px;
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
 }
 
 .main-slider .main-slider-img {
@@ -3019,6 +3025,11 @@ mark,
   }
 }
 
+.product-slider-wrapper {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+}
+
 .product-slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3026,7 +3037,7 @@ mark,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 60px 0;
+  margin: 60px 0 0 0;
 }
 
 .product-slider .slider-item {
@@ -3167,6 +3178,10 @@ mark,
   width: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 .loading {
   position: fixed;
   display: -webkit-box;
@@ -3254,7 +3269,8 @@ mark,
           align-items: center;
   position: relative;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 3px;
   -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: -webkit-box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -3266,14 +3282,17 @@ mark,
   height: 300px;
   display: block;
   will-change: transform;
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: -webkit-transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: -webkit-transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .product-card .product-name {
   margin: 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .product-card .product-see-more {
@@ -3303,8 +3322,8 @@ mark,
 }
 
 .product-card:hover img {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .header {
@@ -3619,11 +3638,81 @@ mark,
   margin-top: 30px;
 }
 
+.testimonial {
+  padding: 80px 0 50px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.testimonial-heading {
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.testimonial-paragraph {
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #777777;
+  color: #ffffff;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.testimonial-author:before {
+  content: "- ";
+}
+
+.testimonial-slider {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 60px 0;
+}
+
+.testimonial-slider .slick-arrow {
+  position: absolute;
+  bottom: 0;
+}
+
+.testimonial-slider .slick-arrow svg {
+  fill: #ffffff;
+}
+
+.testimonial-slider .slick-arrow_left {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.testimonial-slider .slick-arrow_right {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.product-index-page {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-  margin: 100px 0;
+  grid-gap: 15px;
+  padding-bottom: 50px;
 }
 
 .pagination {
@@ -3660,18 +3749,30 @@ mark,
 @media (min-width: 576px) {
   .products {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  .product-index-page {
+    padding: 100px 0;
   }
 }
 
 @media (min-width: 992px) {
   .products {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
   }
 }
 
 .product-show-page {
   text-align: center;
   margin: 100px 0;
+}
+
+.product-show-page .product-name {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .container-fluid {

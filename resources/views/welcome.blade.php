@@ -40,8 +40,9 @@
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="features">
+
+<section class="features">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg">
         <div class="feature">
@@ -84,10 +85,35 @@
       </div>
     </div>
   </div>
+</section>
 
-  @include("partials.product-slider")
+<section class="testimonial" style="background-image: url('{{ asset('img/testimonial.jpg') }}')">
+  <div class="container-fluid">
+    <h3 class="heading-underline heading-underline_center testimonial-heading">What our clients say about our work</h3>
+
+    <div class="slider testimonial-slider">
+      <div class="slider-item">
+        <p class="testimonial-paragraph">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.</p>
+        <h5 class="testimonial-author">STEVE JOBS, INVENTOR</h5>
+      </div>
+      <div class="slider-item">
+        <p class="testimonial-paragraph">People who are creative are the luckiest people on earth. I know there are no shortcuts, but you must keep your faith in something greater than you, and keep doing what you love. Do what you love, and you will find the way to get it out to the world.</p>
+        <h5 class="testimonial-author">JUDY COLLINS, SINGER</h5>
+      </div>
+      <div class="slider-item">
+        <p class="testimonial-paragraph">If you're trying to achieve, there will be roadblocks. I've had them; everybody has had them. But obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.</p>
+        <h5 class="testimonial-author">MICHAEL JORDAN, PLAYER</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="product-slider-wrapper">
+  <div class="container-fluid">
+    <h3 class="heading-underline heading-underline_center">Our products</h3>
+    @include("partials.product-slider")
+  </div>
 </div>
-
 
 @endsection
 

@@ -13574,6 +13574,12 @@ $(".product-slider").slick({
     }
   }]
 });
+
+$(".testimonial-slider").slick({
+  fade: true,
+  prevArrow: "<button class=\"slick-arrow_left\">\n                <svg viewBox=\"0 0 24 24\">\n                  <path d=\"M22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12M14,7L9,12L14,17V7Z\" />\n                </svg>\n              </button>",
+  nextArrow: "<button class=\"slick-arrow_right\">\n                <svg viewBox=\"0 0 24 24\">\n                  <path d=\"M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z\" />\n                </svg>\n              </button>"
+});
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
@@ -16603,6 +16609,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* WEBPACK VAR INJECTION */(function($) {$(window).on("load", function () {
   setTimeout(function () {
     $(".loading").addClass("laoding-hide");
+    $("body").css("overflow", "auto");
   }, 500);
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
