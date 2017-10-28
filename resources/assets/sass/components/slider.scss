@@ -67,7 +67,7 @@ $tr-function: ease-out;
     color: $text-color-light;
     font-weight: bold;
     font-size: 3rem;
-
+    will-change: opacity, transform;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity $tr-opacity $tr-first-delay $tr-function,
@@ -76,7 +76,7 @@ $tr-function: ease-out;
 
   .main-slider-text {
     color: $text-color-light;
-
+    will-change: opacity, transform;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity $tr-opacity $tr-second-delay $tr-function,
@@ -85,9 +85,11 @@ $tr-function: ease-out;
 
   .main-slider-button {
     opacity: 0;
+    will-change: opacity, transform;
     transform: translateY(20px);
     transition: opacity $tr-opacity $tr-third-delay $tr-function,
-      transform $tr-transform $tr-third-delay $tr-function;
+      transform $tr-transform $tr-third-delay $tr-function, color 0.2s linear,
+      background-color 0.2s linear; // color and bg is from button.scss
   }
 
   .slick-current {
@@ -167,4 +169,26 @@ $tr-function: ease-out;
   display: flex;
   align-items: center;
   margin: 60px 0;
+
+  .slider-item {
+    padding: 0 5px;
+  }
+
+  .slick-arrow_right {
+    margin-right: -15px;
+  }
+
+  .slick-arrow_left {
+    margin-left: -15px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .slick-arrow_right {
+      margin-right: 0;
+    }
+
+    .slick-arrow_left {
+      margin-left: 0;
+    }
+  }
 }
