@@ -1,4 +1,7 @@
 let mix = require("laravel-mix");
+const workboxPlugin = require("workbox-webpack-plugin");
+
+const DIST_DIR = "public/";
 
 /*
  |--------------------------------------------------------------------------
@@ -38,6 +41,13 @@ if (mix.inProduction()) {
           ]
         }
       ]
-    }
+    },
+    plugins: [
+      new workboxPlugin({
+        globDirectory: DIST_DIR,
+        globPatterns: ["**/*.{js,css,jpg,png}"],
+        swDest: path.join(DIST_DIR, "sw.js")
+      })
+    ]
   });
 }

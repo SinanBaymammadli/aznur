@@ -24,9 +24,9 @@
         @include("partials.footer")
     </div>
 
-    <div class="loading">
+    <!-- <div class="loading">
       <div class="laoding-cube"></div>
-    </div>
+    </div> -->
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

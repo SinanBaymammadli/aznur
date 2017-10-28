@@ -38,6 +38,13 @@ $tr-function: ease-out;
 
 // main slider
 .main-slider {
+  height: 500px;
+  overflow: hidden;
+
+  .slider-item {
+    width: 100%;
+  }
+
   .main-slider-img {
     display: flex;
     align-items: center;
