@@ -61,7 +61,7 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($locale, Product $product)
     {
       return view('product.edit');
     }
@@ -84,8 +84,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($locale, Product $product)
     {
-        //
+      $product->delete();
+
+      $products = Product::paginate(12);
+
+      return view('product.index')->with('products', $products);
     }
 }

@@ -1,11 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
+@section('page-title')
+  @lang('about.page_title')
+@endsection
 
-<div class="page-title-wrapper" style="background-image: url('{{ asset('img/header-bottom-bg.jpg') }}')">
-  <h1 class="page-title heading-underline heading-underline_center">@lang('about.page_title')</h1>
-</div>
-
+@section('page-content')
 <div class="about-page">
   <div class="container-fluid">
     <div class="row">
@@ -19,7 +18,6 @@
         </div>
       </div>
       <div class="col-md about-col">
-        <!-- <img class="d-block w-100" src="{{ asset('img/about-img.jpg')}}" alt=""> -->
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/u3HUmgxk6X0"
           frameborder="0" allowfullscreen></iframe>
       </div>

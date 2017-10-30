@@ -1,13 +1,21 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
-<div class="page-title-wrapper" style="background-image: url('{{ asset('img/header-bottom-bg.jpg') }}')">
-  <h1 class="page-title heading-underline heading-underline_center">@lang('product/index.page_title')</h1>
-</div>
+@section('page-title')
+  @lang('product/index.page_title')
+@endsection
 
+@section('page-content')
 <div class="container-fluid">
-
   <div class="product-show-page">
+    <form action="{{ route('products.destroy', [app()->getLocale(), $product->id] ) }}" method="POST" id="product-delete-form">
+      {{ method_field('DELETE') }}
+      {{ csrf_field() }}
+
+      <button class="button" id="product-delete-btn">Delete this product</button>
+    </form>
+
+    <a href="{{ route('products.edit', [app()->getLocale(), $product->id] ) }}" class="button">Edit this product</a>
+
     <h5 class="product-name heading-underline heading-underline_center">{{ $product->name }}</h5>
     <div class="row">
       <div class="col-md-4">

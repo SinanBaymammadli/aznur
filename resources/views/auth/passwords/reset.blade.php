@@ -1,12 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
-<div class="page-title-wrapper">
-  <h1 class="page-title text-center heading-underline heading-underline_center">
-    Reset Password
-  </h1>
-</div>
+@section('page-title')
+  Reset Password
+@endsection
 
+@section('page-content')
 <div class="container-fluid">
   <div class="register-page">
     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">

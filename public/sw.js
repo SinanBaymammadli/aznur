@@ -20,7 +20,7 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "css/app.css",
-    "revision": "697be148bed01623a5f9790cfda3a746"
+    "revision": "37ff8cf80f82afba444364980ad2ed09"
   },
   {
     "url": "images/header-bottom-bg.jpg",
@@ -48,7 +48,7 @@ const fileManifest = [
   },
   {
     "url": "js/app.js",
-    "revision": "841bd35f424cff8fa670513295404720"
+    "revision": "63fd26109794573e7abf51b9394f5ba5"
   }
 ];
 

@@ -1,6 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
+@section('page-title')
+  Create product
+@endsection
+
+@section('page-content')
 <div class="container-fluid">
 
   <h2>Product create</h2>

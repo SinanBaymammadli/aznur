@@ -1,12 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
-<div class="page-title-wrapper">
-  <h1 class="page-title text-center heading-underline heading-underline_center">
-    Login
-  </h1>
-</div>
+@section('page-title')
+  Login
+@endsection
 
+@section('page-content')
 <div class="container-fluid">
   <div class="register-page">
     <form method="POST" action="{{ route('login') }}">

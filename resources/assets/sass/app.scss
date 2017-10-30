@@ -8,7 +8,7 @@
 
 // Optional
 //@import "node_modules/bootstrap/scss/carousel";
-@import "node_modules/bootstrap/scss/dropdown";
+//@import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/bootstrap-grid";
 @import "node_modules/bootstrap/scss/type";
 
@@ -22,6 +22,7 @@
 @import "components/button";
 //@import "components/loading";
 @import "components/product-card";
+@import "components/dropdown";
 
 @import "partials/header";
 @import "partials/footer";

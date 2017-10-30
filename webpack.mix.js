@@ -15,8 +15,31 @@ const DIST_DIR = "public/";
  */
 
 mix.autoload({
-  jquery: ["$", "window.jQuery"],
-  "popper.js/dist/umd/popper.js": ["Popper"]
+  jquery: ["$", "window.jQuery"]
+});
+
+mix.webpackConfig({
+  module: {
+    rules: [
+      {
+        test: /\.js?$/,
+        exclude: /node_modules(?!\/bootstrap)|bower_components/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: mix.config.babel()
+          }
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new workboxPlugin({
+      globDirectory: DIST_DIR,
+      globPatterns: ["**/*.{js,css,jpg,png}"],
+      swDest: path.join(DIST_DIR, "sw.js")
+    })
+  ]
 });
 
 mix
@@ -26,28 +49,4 @@ mix
 
 if (mix.inProduction()) {
   mix.version();
-
-  mix.webpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.js?$/,
-          exclude: /node_modules(?!\/bootstrap)|bower_components/,
-          use: [
-            {
-              loader: "babel-loader",
-              options: mix.config.babel()
-            }
-          ]
-        }
-      ]
-    },
-    plugins: [
-      new workboxPlugin({
-        globDirectory: DIST_DIR,
-        globPatterns: ["**/*.{js,css,jpg,png}"],
-        swDest: path.join(DIST_DIR, "sw.js")
-      })
-    ]
-  });
 }

@@ -8,7 +8,8 @@ require("./bootstrap");
 
 import "./header";
 import "./slider";
-//import "./loading";
+import "./dropdown";
+import "./product";
 
 if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the

@@ -46,12 +46,12 @@
   opacity: 0;
   pointer-events: none;
   will-change: transform, opacity;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 
   &.show {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
   }
 }
 
@@ -93,16 +93,22 @@
     }
 
     .lang-dropdown {
-      button {
+      .dropdown-toggle {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
         color: $text-color-light;
       }
-    }
 
-    .lang-dropdown .dropdown-menu {
-      min-width: auto;
+      .dropdown-item {
+        color: $text-color-dark;
+        transition: color 0.2s linear;
+
+        &:hover {
+          text-decoration: none;
+          color: $primary-color;
+        }
+      }
     }
 
     .header-logo {

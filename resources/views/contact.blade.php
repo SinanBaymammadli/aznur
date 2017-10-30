@@ -1,11 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
+@section('page-title')
+  @lang('contact.page_title')
+@endsection
 
-<div class="page-title-wrapper"  style="background-image: url('{{ asset('img/header-bottom-bg.jpg') }}')">
-  <h1 class="page-title heading-underline heading-underline_center">@lang('contact.page_title')</h1>
-</div>
-
+@section('page-content')
 <div class="contact-page">
   <div class="container-fluid">
     <div class="row">

@@ -1,12 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
+@section('page-title')
+  Reset Password
+@endsection
 
-<div class="page-title-wrapper">
-  <h1 class="page-title text-center heading-underline heading-underline_center">
-    Reset Password
-  </h1>
-</div>
+@section('page-content')
 
 <div class="container-fluid">
   <div class="password-reset-page">

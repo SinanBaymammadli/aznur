@@ -40,7 +40,6 @@
   </div>
 </div>
 
-
 <section class="features">
   <div class="container-fluid">
     <div class="row">

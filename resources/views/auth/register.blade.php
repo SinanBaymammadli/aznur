@@ -1,11 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
-<div class="page-title-wrapper">
-  <h1 class="page-title text-center heading-underline heading-underline_center">
-    Register
-  </h1>
-</div>
+@section('page-title')
+  Register
+@endsection
+
+@section('page-content')
 
 <div class="container-fluid">
   <div class="register-page">

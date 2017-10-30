@@ -1,12 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
-<div class="page-title-wrapper" style="background-image: url('{{ asset('img/header-bottom-bg.jpg') }}')">
-  <h1 class="page-title text-center heading-underline heading-underline_center">@lang('product/index.page_title')</h1>
-</div>
+@section('page-title')
+  @lang('product/index.page_title')
+@endsection
 
+@section('page-content')
 <div class="product-index-page">
   <div class="container-fluid">
+
+    @auth
+      <a href="{{ route('products.create', app()->getLocale()) }}" class="button">Add new product</a>
+    @endauth
+
     <div class="products">
       @foreach( $products as $product )
         <a href="{{ route('products.show', [app()->getLocale(), $product->id]) }}" class="product-card">

@@ -10,7 +10,7 @@ try {
   window.$ = window.jQuery = require("jquery");
 } catch (e) {}
 
-import "bootstrap/js/src/dropdown";
+//import "bootstrap/js/src/dropdown";
 //import "bootstrap/js/src/carousel";
 
 /**
