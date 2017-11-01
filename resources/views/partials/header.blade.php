@@ -15,7 +15,7 @@
           <a class="header-link {{ Nav::hasSegment('about', 2) }}" href="/about">
             @lang('header.about')
           </a>
-          <a class="header-link {{ Nav::isResource('products') }}" href="/products">
+          <a class="header-link {{ Nav::isResource('products') }}" href="{{ route('products.index', app()->getLocale()) }}">
             @lang('header.products')
           </a>
           <a class="header-link {{ Nav::hasSegment('contact', 2) }}" href="/contact">

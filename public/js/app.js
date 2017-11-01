@@ -10328,7 +10328,7 @@ return jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(9);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
@@ -10344,6 +10344,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dropdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dropdown__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__product__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__image_upload__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__image_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__image_upload__);
 /**
  * First, we will load all of this project's Javascript utilities and other
  * dependencies. Then, we will be ready to develop a robust and powerful
@@ -10351,6 +10353,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(3);
+
 
 
 
@@ -13565,6 +13568,27 @@ if (deleteBtn) {
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$("#image").change(function () {
+  readURL(this);
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $("#image-preview").attr("src", e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

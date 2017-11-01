@@ -8,10 +8,12 @@
 <div class="product-create-page">
   <div class="container-fluid">
 
-    <form action="">
+    <form action="{{ route('products.store', app()->getLocale()) }}" method="post" enctype="multipart/form-data">
+      {{ csrf_field() }}
       <div class="row">
         <div class="col-md-4">
-          <input type="file">
+          <input type="file" id="image" name="img" required>
+          <img id="image-preview" src="" alt="">
         </div>
         <div class="col-md-8">
           <input type="text" class="input" name="name" placeholder="Name of product" required>

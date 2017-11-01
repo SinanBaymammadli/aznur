@@ -3046,6 +3046,11 @@ mark,
   color: #ffffff;
 }
 
+#image-preview {
+  display: block;
+  max-width: 100%;
+}
+
 .button {
   display: inline-block;
   font-size: 14px;
@@ -3385,6 +3390,7 @@ mark,
             transform: translate(0);
     -webkit-box-shadow: none;
             box-shadow: none;
+    border-top: none;
     pointer-events: auto;
     background-color: transparent;
   }

@@ -10,6 +10,7 @@ import "./header";
 import "./slider";
 import "./dropdown";
 import "./product";
+import "./image-upload";
 
 // if ("serviceWorker" in navigator) {
 //   // Register a service worker hosted at the root of the

@@ -9,7 +9,7 @@ class WelcomeController extends Controller
 {
   public function index()
   {
-    $products = Product::all();
+    $products = Product::orderBy('id', 'desc')->get();
 
     return view('welcome')->with('products', $products);
   }

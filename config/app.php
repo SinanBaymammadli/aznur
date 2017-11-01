@@ -171,6 +171,7 @@ return [
          */
 
         DevMarketer\EasyNav\EasyNavServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Nav' => DevMarketer\EasyNav\EasyNavFacade::class,
         'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="product-card">
-          <img src="{{ asset($product->imgUrl) }}" alt="product {{ $product->name }}">
+          <img src="{{ asset('products/' . $product->imgUrl) }}" alt="product {{ $product->name }}">
         </div>
       </div>
       <div class="col-md-8">
