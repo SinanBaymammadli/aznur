@@ -23,9 +23,9 @@ Route::prefix('/{locale?}')->middleware('locale')->group(function () {
     return view('about');
   });
 
-  Route::get('/contact', function () {
-    return view('contact');
-  });
+  Route::get('/contact', 'ContactController@index');
+
+  Route::post('/contact', 'ContactController@sendEmail')->name('sendEmail');
 
   Route::resource('/products', 'ProductController');
 

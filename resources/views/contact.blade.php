@@ -13,19 +13,22 @@
           Contact us for a quick quote or call us – 555 87895 90
         </h5>
 
-        <form class="contact-form">
+        <form action="{{ route('sendEmail', app()->getLocale()) }}" class="contact-form"
+              method="post">
+          {{ csrf_field() }}
           <div class="row">
             <div class="col-md">
-              <input type="text" class="input" placeholder="Your name">
+              <input type="text" class="input" name="name" placeholder="Your name" required>
             </div>
             <div class="col-md">
-              <input type="email" class="input" placeholder="Your email">
+              <input type="email" class="input" name="email" placeholder="Your email" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col">
-              <textarea class="textarea" placeholder="Write your message here..." rows="10"></textarea>
+              <textarea class="textarea" name="message" placeholder="Write your message here..."
+                        rows="10" required ></textarea>
             </div>
           </div>
 
