@@ -5,16 +5,23 @@
 @endsection
 
 @section('page-content')
-<div class="container-fluid">
-  <div class="product-show-page">
-    <form action="{{ route('products.destroy', [app()->getLocale(), $product->id] ) }}" method="POST" id="product-delete-form">
-      {{ method_field('DELETE') }}
-      {{ csrf_field() }}
+<div class="product-show-page">
+  <div class="container-fluid">
 
-      <button class="button" id="product-delete-btn">Delete this product</button>
-    </form>
+    @auth
+      <div class="actions">
+        <a href="{{ route('products.edit', [app()->getLocale(), $product->id] ) }}" class="button">
+          Edit
+        </a>
 
-    <a href="{{ route('products.edit', [app()->getLocale(), $product->id] ) }}" class="button">Edit this product</a>
+        <form action="{{ route('products.destroy', [app()->getLocale(), $product->id] ) }}" method="POST" id="product-delete-form">
+          {{ method_field('DELETE') }}
+          {{ csrf_field() }}
+
+          <button class="button" id="product-delete-btn">Delete</button>
+        </form>
+      </div>
+    @endauth
 
     <h5 class="product-name heading-underline heading-underline_center">{{ $product->name }}</h5>
     <div class="row">
@@ -27,6 +34,7 @@
         <p>{{ $product->description }}</p>
       </div>
     </div>
+
   </div>
 </div>
 

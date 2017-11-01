@@ -9,7 +9,11 @@
   <div class="container-fluid">
 
     @auth
-      <a href="{{ route('products.create', app()->getLocale()) }}" class="button">Add new product</a>
+      <div class="actions">
+        <a href="{{ route('products.create', app()->getLocale()) }}" class="button">
+          Add new product
+        </a>
+      </div>
     @endauth
 
     <div class="products">

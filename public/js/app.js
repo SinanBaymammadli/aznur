@@ -10357,17 +10357,20 @@ __webpack_require__(3);
 
 
 
-if ("serviceWorker" in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker.register("/sw.js").then(function (registration) {
-    console.log("Service worker registration succeeded:", registration);
-  }).catch(function (error) {
-    console.log("Service worker registration failed:", error);
-  });
-} else {
-  console.log("Service workers are not supported.");
-}
+// if ("serviceWorker" in navigator) {
+//   // Register a service worker hosted at the root of the
+//   // site using the default scope.
+//   navigator.serviceWorker
+//     .register("/sw.js")
+//     .then(function(registration) {
+//       console.log("Service worker registration succeeded:", registration);
+//     })
+//     .catch(function(error) {
+//       console.log("Service worker registration failed:", error);
+//     });
+// } else {
+//   console.log("Service workers are not supported.");
+// }
 
 /***/ }),
 /* 3 */
@@ -10432,14 +10435,21 @@ try {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var toggleBtn = document.querySelector(".js-nav-toggle-btn");
+/* WEBPACK VAR INJECTION */(function($) {var toggleBtn = document.querySelector(".js-nav-toggle-btn");
 var mainNav = document.querySelector(".js-main-nav");
 
 toggleBtn.addEventListener("click", function () {
   mainNav.classList.toggle("show");
 });
+
+$(window).click(function (event) {
+  if (!event.target.matches(".header *")) {
+    mainNav.classList.remove("show");
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 5 */
