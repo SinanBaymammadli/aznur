@@ -20,7 +20,7 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "css/app.css",
-    "revision": "d5c722d05eda9cadfc647d9caf3dec4f"
+    "revision": "bf291a04fa6027cdf0ca5175d3c640e1"
   },
   {
     "url": "img/header-bottom-bg.jpg",
@@ -40,11 +40,19 @@ const fileManifest = [
   },
   {
     "url": "js/app.js",
-    "revision": "c19a01c0256f8089f692f8bfd083b36c"
+    "revision": "838d2ee646339bed246c58486a1a250d"
   },
   {
-    "url": "products/1509572099.jpg",
-    "revision": "69fc749261fd10f411c42c066f7a1faa"
+    "url": "products/1509573327.png",
+    "revision": "e8dcc79ee3113e1b70a7cd3e3ed3bdcc"
+  },
+  {
+    "url": "products/1509573902.png",
+    "revision": "297a143290808cbfb6aa805ae6daaad0"
+  },
+  {
+    "url": "products/1509574837.png",
+    "revision": "e8c1dd20df83398877727a09be5d019c"
   },
   {
     "url": "products/product1.png",
