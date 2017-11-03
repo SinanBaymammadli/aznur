@@ -4,36 +4,42 @@
 
 <div class="slider main-slider">
   <div class="slider-item">
-    <div class="main-slider-img" style="background-image: url(' {{ asset('img/img1.jpg') }} ')">
-      <div class="container-fluid">
-        <div class="main-slider-content">
-          <h1 class="main-slider-heading">We are the best construction experts</h1>
-          <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
-          <a href="/about" class="button main-slider-button">See our lastest work</a>
+    <div class="main-slider-img" style="background-image: url(' {{ asset('img/slider1.jpg') }} ')">
+      <div class="main-slider-overlay">
+        <div class="container-fluid">
+          <div class="main-slider-content">
+            <h1 class="main-slider-heading">We are the best construction experts</h1>
+            <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
+            <a href="/about" class="button main-slider-button">See our lastest work</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="slider-item">
-    <div class="main-slider-img" style="background-image: url(' {{ asset('img/img2.jpg') }} ')">
-      <div class="container-fluid">
-        <div class="main-slider-content">
-          <h1 class="main-slider-heading">We are the best construction experts</h1>
-          <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
-          <a href="{{ route('products.index', app()->getLocale()) }}" class="button main-slider-button">See our lastest work</a>
+    <div class="main-slider-img" style="background-image: url(' {{ asset('img/slider2.jpg') }} ')">
+      <div class="main-slider-overlay">
+        <div class="container-fluid">
+          <div class="main-slider-content">
+            <h1 class="main-slider-heading">We are the best construction experts</h1>
+            <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
+            <a href="{{ route('products.index', app()->getLocale()) }}" class="button main-slider-button">See our lastest work</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="slider-item">
-    <div class="main-slider-img" style="background-image: url(' {{ asset('img/img1.jpg') }} ')">
-      <div class="container-fluid">
-        <div class="main-slider-content">
-          <h1 class="main-slider-heading">We are the best construction experts</h1>
-          <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
-          <a href="/contact" class="button main-slider-button">See our lastest work</a>
+    <div class="main-slider-img" style="background-image: url(' {{ asset('img/slider3.jpg') }} ')">
+      <div class="main-slider-overlay">
+        <div class="container-fluid">
+          <div class="main-slider-content">
+            <h1 class="main-slider-heading">We are the best construction experts</h1>
+            <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
+            <a href="/contact" class="button main-slider-button">See our lastest work</a>
+          </div>
         </div>
       </div>
     </div>
@@ -86,22 +92,24 @@
   </div>
 </section>
 
-<section class="testimonial" style="background-image: url('{{ asset('img/testimonial.jpg') }}')">
-  <div class="container-fluid">
-    <h3 class="heading-underline heading-underline_center testimonial-heading">What our clients say about our work</h3>
+<section class="testimonial" style="background-image: url('{{ asset('img/testimonial1.jpeg') }}')">
+  <div class="testimonial-overlay">
+    <div class="container-fluid">
+      <h3 class="heading-underline heading-underline_center testimonial-heading">What our clients say about our work</h3>
 
-    <div class="slider testimonial-slider">
-      <div class="slider-item">
-        <p class="testimonial-paragraph">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.</p>
-        <h5 class="testimonial-author">STEVE JOBS, INVENTOR</h5>
-      </div>
-      <div class="slider-item">
-        <p class="testimonial-paragraph">People who are creative are the luckiest people on earth. I know there are no shortcuts, but you must keep your faith in something greater than you, and keep doing what you love. Do what you love, and you will find the way to get it out to the world.</p>
-        <h5 class="testimonial-author">JUDY COLLINS, SINGER</h5>
-      </div>
-      <div class="slider-item">
-        <p class="testimonial-paragraph">If you're trying to achieve, there will be roadblocks. I've had them; everybody has had them. But obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.</p>
-        <h5 class="testimonial-author">MICHAEL JORDAN, PLAYER</h5>
+      <div class="slider testimonial-slider">
+        <div class="slider-item">
+          <p class="testimonial-paragraph">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.</p>
+          <h5 class="testimonial-author">STEVE JOBS, INVENTOR</h5>
+        </div>
+        <div class="slider-item">
+          <p class="testimonial-paragraph">People who are creative are the luckiest people on earth. I know there are no shortcuts, but you must keep your faith in something greater than you, and keep doing what you love. Do what you love, and you will find the way to get it out to the world.</p>
+          <h5 class="testimonial-author">JUDY COLLINS, SINGER</h5>
+        </div>
+        <div class="slider-item">
+          <p class="testimonial-paragraph">If you're trying to achieve, there will be roadblocks. I've had them; everybody has had them. But obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.</p>
+          <h5 class="testimonial-author">MICHAEL JORDAN, PLAYER</h5>
+        </div>
       </div>
     </div>
   </div>

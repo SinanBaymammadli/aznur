@@ -20,19 +20,23 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "css/app.css",
-    "revision": "bf291a04fa6027cdf0ca5175d3c640e1"
+    "revision": "83712b1d79ed984ae141c12f53b4bab7"
   },
   {
     "url": "img/header-bottom-bg.jpg",
     "revision": "f1a11fa57c1fc6c7958c8785b1a39118"
   },
   {
-    "url": "img/img1.jpg",
-    "revision": "83151c0b85262d5faebc505db7e2244b"
+    "url": "img/slider1.jpg",
+    "revision": "5868a2caae64bf42e450ea109b16beac"
   },
   {
-    "url": "img/img2.jpg",
-    "revision": "64b72c7a3634130887bff746524c4216"
+    "url": "img/slider2.jpg",
+    "revision": "018bd37d435c0bb8a05820dd2a69705f"
+  },
+  {
+    "url": "img/slider3.jpg",
+    "revision": "8ba3e13108d51dd226d424a9bfee6e80"
   },
   {
     "url": "img/testimonial.jpg",
@@ -40,7 +44,7 @@ const fileManifest = [
   },
   {
     "url": "js/app.js",
-    "revision": "59d29470823067177f176117c8a62ebf"
+    "revision": "28a9835bd813e72dd481a3bae3a17371"
   },
   {
     "url": "products/1509573327.png",

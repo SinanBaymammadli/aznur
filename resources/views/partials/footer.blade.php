@@ -11,7 +11,7 @@
 
         <a class="footer-link {{ Nav::hasSegment(NULL, 2) }}" href="/">@lang('header.home')</a>
         <a class="footer-link {{ Nav::hasSegment('about', 2) }}" href="/about">@lang('header.about')</a>
-        <a class="footer-link {{ Nav::isResource('products') }}" href="/products">@lang('header.products')</a>
+        <a class="footer-link {{ Nav::isResource('products') }}" href="{{ route('products.index', app()->getLocale()) }}">@lang('header.products')</a>
         <a class="footer-link {{ Nav::hasSegment('contact', 2) }}" href="/contact">@lang('header.contact')</a>
       </div>
       <div class="col-md-3 footer-col">

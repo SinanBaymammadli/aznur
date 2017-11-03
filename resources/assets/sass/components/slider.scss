@@ -46,14 +46,24 @@ $tr-function: ease-out;
   }
 
   .main-slider-img {
-    display: flex;
-    align-items: center;
-    height: 500px;
-    width: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #222;
+    height: 500px;
+    width: 100%;
+  }
+
+  .main-slider-overlay {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    //background-color: rgba($color: #000000, $alpha: 0.2);
+    background: repeating-linear-gradient(
+      90deg,
+      rgba($color: #000000, $alpha: 0.4),
+      rgba($color: #000000, $alpha: 0.5) 2px
+    );
   }
 
   .slick-arrow {
