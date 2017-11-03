@@ -9,7 +9,7 @@
         <div class="main-slider-content">
           <h1 class="main-slider-heading">We are the best construction experts</h1>
           <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
-          <button class="button main-slider-button">See our lastest work</button>
+          <a href="/about" class="button main-slider-button">See our lastest work</a>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="main-slider-content">
           <h1 class="main-slider-heading">We are the best construction experts</h1>
           <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
-          <button class="button main-slider-button">See our lastest work</button>
+          <a href="{{ route('products.index', app()->getLocale()) }}" class="button main-slider-button">See our lastest work</a>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <div class="main-slider-content">
           <h1 class="main-slider-heading">We are the best construction experts</h1>
           <p class="main-slider-text">Lars Focke specialises in capturing patterns and turning them</p>
-          <button class="button main-slider-button">See our lastest work</button>
+          <a href="/contact" class="button main-slider-button">See our lastest work</a>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const fileManifest = [
   },
   {
     "url": "js/app.js",
-    "revision": "838d2ee646339bed246c58486a1a250d"
+    "revision": "59d29470823067177f176117c8a62ebf"
   },
   {
     "url": "products/1509573327.png",
