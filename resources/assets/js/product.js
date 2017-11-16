@@ -10,3 +10,5 @@ if (deleteBtn) {
     }
   });
 }
+
+const buttonBig = document.querySelector("button");
