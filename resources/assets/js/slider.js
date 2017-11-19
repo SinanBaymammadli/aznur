@@ -2,7 +2,7 @@ import "slick-carousel";
 
 $(".main-slider").slick({
   dots: true,
-  //autoplay: true,
+  autoplay: true,
   autoplaySpeed: 5000,
   prevArrow: "",
   nextArrow: ""
