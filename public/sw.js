@@ -20,11 +20,7 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "css/app.css",
-    "revision": "49aec1ba4337c8e6554d194a6613575e"
-  },
-  {
-    "url": "img/header-bottom-bg.jpg",
-    "revision": "f1a11fa57c1fc6c7958c8785b1a39118"
+    "revision": "9310499a041183d5760a657e2f701dc6"
   },
   {
     "url": "img/slider1.jpg",
@@ -39,12 +35,8 @@ const fileManifest = [
     "revision": "8ba3e13108d51dd226d424a9bfee6e80"
   },
   {
-    "url": "img/testimonial.jpg",
-    "revision": "a6b17d9f59ce16a02eada70039b1b3ae"
-  },
-  {
     "url": "js/app.js",
-    "revision": "63bf81a6ef22ab1d45f29f1db11da9c6"
+    "revision": "0930c466007df0388c4ba8b199bd6f80"
   },
   {
     "url": "products/1509573327.png",
@@ -77,6 +69,14 @@ const fileManifest = [
   {
     "url": "products/1511095900.png",
     "revision": "f41e7ad8dc8249a0c835869898e7370e"
+  },
+  {
+    "url": "products/1511112360.png",
+    "revision": "f41e7ad8dc8249a0c835869898e7370e"
+  },
+  {
+    "url": "products/1511112482.png",
+    "revision": "b1436dc7127e1ba2985f9a58ca13a8f5"
   },
   {
     "url": "products/product1.png",

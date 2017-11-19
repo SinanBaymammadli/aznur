@@ -15,6 +15,7 @@
 @section('page-content')
 <div class="contact-page">
   <div class="container-fluid">
+
     <div class="row">
       <div class="col-md contact-col">
         <h5 class="heading-underline contact-heading">
