@@ -1,5 +1,13 @@
 @extends('layouts.page')
 
+@section('meta')
+  <meta name="keywords" content="cable,kabel">
+@endsection
+
+@section('title')
+  {{ $product->name }}
+@endsection
+
 @section('page-title')
   @lang('product/index.page_title')
 @endsection
@@ -26,12 +34,12 @@
     <h5 class="product-name heading-underline heading-underline_center">{{ $product->name }}</h5>
     <div class="row">
       <div class="col-md-4">
-        <div class="product-card">
+        <div class="text-center">
           <img src="{{ asset('products/' . $product->imgUrl) }}" alt="product {{ $product->name }}">
         </div>
       </div>
       <div class="col-md-8">
-        <p>{{ $product->description }}</p>
+        {!! $product->description !!}
       </div>
     </div>
 
@@ -40,7 +48,7 @@
 
 <div class="product-slider-wrapper">
   <div class="container-fluid">
-    <h3 class="heading-underline heading-underline_center">Our products</h3>
+    <h3 class="heading-underline heading-underline_center">@lang('product/show.our_products')</h3>
     @include("partials.product-slider")
   </div>
 </div>

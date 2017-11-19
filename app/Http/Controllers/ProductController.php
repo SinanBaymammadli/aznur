@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Image;
 use File;
+use Purifier;
 use Illuminate\Validation\Rule;
 
 class ProductController extends Controller
@@ -49,7 +50,7 @@ class ProductController extends Controller
 
       $product = new Product;
       $product->name = $request->name;
-      $product->description = $request->description;
+      $product->description = Purifier::clean($request->description);
 
       if ($request->hasFile('img')) {
         $image = $request->file('img');
@@ -111,7 +112,7 @@ class ProductController extends Controller
       ]);
 
       $product->name = $request->name;
-      $product->description = $request->description;
+      $product->description = Purifier::clean($request->description);
 
       if ($request->hasFile('img')) {
         //delete old image

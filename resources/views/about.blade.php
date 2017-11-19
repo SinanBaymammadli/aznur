@@ -1,5 +1,13 @@
 @extends('layouts.page')
 
+@section('meta')
+  <meta name="keywords" content="cable,kabel">
+@endsection
+
+@section('title')
+  @lang('about.page_title')
+@endsection
+
 @section('page-title')
   @lang('about.page_title')
 @endsection

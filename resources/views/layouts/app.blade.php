@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffcc00" />
 
+    <!-- Meta tags -->
+    @yield('meta')
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Aznur Kabel | </title>
+    <title>Aznur Kabel | @yield('title')</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,10 +27,6 @@
 
         @include("partials.footer")
     </div>
-
-    <!-- <div class="loading">
-      <div class="laoding-cube"></div>
-    </div> -->
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

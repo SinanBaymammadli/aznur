@@ -1,5 +1,13 @@
 @extends('layouts.page')
 
+@section('meta')
+  <meta name="keywords" content="cable,kabel">
+@endsection
+
+@section('title')
+  @lang('product/index.page_title')
+@endsection
+
 @section('page-title')
   @lang('product/index.page_title')
 @endsection
@@ -16,17 +24,22 @@
       </div>
     @endauth
 
-    <div class="products">
-      @foreach( $products as $product )
-        <a href="{{ route('products.show', [app()->getLocale(), $product->id]) }}" class="product-card">
-          <img src="{{ asset('products/' . $product->imgUrl) }}" alt="product {{ $product->name }}">
-          <h5 class="product-name">{{ $product->name }}</h5>
-          <div class="button product-see-more">More</div>
-        </a>
-      @endforeach
-    </div>
+    @if( isset($products) && count($products) > 0 )
+      <div class="products">
+        @foreach( $products as $product )
+          <a href="{{ route('products.show', [app()->getLocale(), $product->id]) }}" class="product-card">
+            <img src="{{ asset('products/' . $product->imgUrl) }}" alt="product {{ $product->name }}">
+            <h5 class="product-name">{{ $product->name }}</h5>
+            <div class="button product-see-more">@lang('product/index.more_btn')</div>
+          </a>
+        @endforeach
+      </div>
 
-    {{ $products->links() }}
+      {{ $products->links() }}
+
+    @else
+      <p class="text-center">No product.</p>
+    @endif
   </div>
 </div>
 @endsection

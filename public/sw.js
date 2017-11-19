@@ -20,7 +20,7 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "css/app.css",
-    "revision": "6a27a372a22c304639e5e816e497f817"
+    "revision": "49aec1ba4337c8e6554d194a6613575e"
   },
   {
     "url": "img/header-bottom-bg.jpg",
@@ -44,7 +44,7 @@ const fileManifest = [
   },
   {
     "url": "js/app.js",
-    "revision": "0930c466007df0388c4ba8b199bd6f80"
+    "revision": "63bf81a6ef22ab1d45f29f1db11da9c6"
   },
   {
     "url": "products/1509573327.png",
@@ -57,6 +57,26 @@ const fileManifest = [
   {
     "url": "products/1509574837.png",
     "revision": "e8c1dd20df83398877727a09be5d019c"
+  },
+  {
+    "url": "products/1511093326.png",
+    "revision": "f41e7ad8dc8249a0c835869898e7370e"
+  },
+  {
+    "url": "products/1511093612.png",
+    "revision": "f41e7ad8dc8249a0c835869898e7370e"
+  },
+  {
+    "url": "products/1511093777.png",
+    "revision": "b1436dc7127e1ba2985f9a58ca13a8f5"
+  },
+  {
+    "url": "products/1511094183.png",
+    "revision": "f41e7ad8dc8249a0c835869898e7370e"
+  },
+  {
+    "url": "products/1511095900.png",
+    "revision": "f41e7ad8dc8249a0c835869898e7370e"
   },
   {
     "url": "products/product1.png",
