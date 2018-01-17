@@ -11,26 +11,30 @@
 |
 */
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('/{locale?}')->middleware('locale')->group(function () {
+// Route::prefix('/{locale?}')->middleware('locale')->group(function () {
 
-  Route::get('/', 'WelcomeController@index')->name('welcome');
+//   Route::get('/', 'WelcomeController@index')->name('welcome');
 
-  Route::get('/about', function () {
-    return view('about');
-  });
+//   Route::get('/about', function () {
+//     return view('about');
+//   });
 
-  Route::get('/contact', 'ContactController@index');
+//   Route::get('/contact', 'ContactController@index');
 
-  Route::post('/contact', 'ContactController@sendEmail')->name('sendEmail');
+//   Route::post('/contact', 'ContactController@sendEmail')->name('sendEmail');
 
-  Route::resource('/products', 'ProductController');
+//   Route::resource('/products', 'ProductController');
 
-  Route::group(['middleware' => 'auth'], function() {
-    Route::resource('products', 'ProductController', ['except' => ['index', 'show']]);
-  });
+//   Route::group(['middleware' => 'auth'], function() {
+//     Route::resource('products', 'ProductController', ['except' => ['index', 'show']]);
+//   });
 
+// });
+
+Route::get('{any?}', function() {
+  return view('soon');
 });
